@@ -1,24 +1,16 @@
+
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// export default defineConfig({
-//     plugins: [vue()],
-//     base: "/",
-//     resolve: {
-//         alias: {
-//             vuex: 'vuex/dist/vuex.esm-bundler.js'
-//         }
-//     },
-    
-// })
-
-
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ command }) => {
+  return {
     plugins: [vue()],
-    base: mode === 'production' ? '/frontend/' : '/',
+    base: command === 'serve' ? '/' : '/frontend/',
     resolve: {
-            alias: {
-                vuex: 'vuex/dist/vuex.esm-bundler.js'
-            }
-        },
-}))
+      alias: {
+        vuex: 'vuex/dist/vuex.esm-bundler.js'
+      }
+    },
+  }
+})

@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
     registerRoute
 ]
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/frontend/'),
     routes
 });
 
