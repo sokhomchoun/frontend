@@ -4,3 +4,4 @@ export default {
     component: () => import('../../components/home/ListComponent.vue'),
     meta: { requiresAuth: true } 
 }
+

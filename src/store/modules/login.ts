@@ -6,7 +6,7 @@ export const login = {
 
     },
     actions: {
-        signin: function (context: any, payload: any) {
+        signin: function (_context: any, payload: any) {
             return new Promise((resolve, reject) => {
                 let url = "User/login";
                 axios.post(url,payload).then((res) => {
