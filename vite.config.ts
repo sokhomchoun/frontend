@@ -8,5 +8,5 @@ export default defineConfig({
             vuex: 'vuex/dist/vuex.esm-bundler.js'
         }
     },
-    base: '/frontend'
+    base: "/"
 })
